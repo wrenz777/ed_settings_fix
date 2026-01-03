@@ -67,7 +67,11 @@ private:
 	bool ctrl_btn_pressed = false;
 	bool shift_btn_pressed = false;
 	bool alt_btn_pressed = false;
-
+	
+	Ref<InputEventKey> shift_modifier_event;
+	Ref<InputEventKey> ctrl_modifier_event;
+	Ref<InputEventKey> alt_modifier_event;
+  
 	bool is_floating = false; // Embedded panel mode is default.
 	int embedded_panel_index = 0;
 
@@ -84,7 +88,6 @@ private:
 	Button *_add_new_action_button(const String &p_shortcut, const String &p_name, Key p_keycode = Key::NONE);
 	void _add_new_modifier_button(Modifier p_modifier);
 	void _on_modifier_button_toggled(bool p_pressed, int p_modifier);
-
 	void _hardware_keyboard_connected(bool p_connected);
 
 public:
