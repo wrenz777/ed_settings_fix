@@ -20,11 +20,14 @@ CompileFlags:
     - -Wno-unused-const-variable
     - -Wno-unused-function
     - -Wno-unused-variable
+    - -I/workspaces/godot/
+    - -xc++-header
 ---
 # Suppress all third-party warnings.
 
 If:
   PathMatch: thirdparty/.*
+
 
 Diagnostics:
   Suppress: "*"
